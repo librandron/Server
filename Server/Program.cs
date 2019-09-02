@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Server.Domain;
+using System;
 using System.IO;
 using System.Net;
 
@@ -24,6 +26,13 @@ namespace Server
 
                 var requestPathFile = pathIndex + request.Url.LocalPath;
                 var file = File.ReadAllText(requestPathFile);
+
+                if(request.Url.LocalPath.Contains("part.html"))
+                {
+                    file = File.ReadAllText(requestPathFile);
+                    var fileJson = File.ReadAllLines(@"D:\");
+                    Database data = JsonConvert.DeserializeObject<Database>(fileJson);
+                }
 
                 byte[] fileAsByte = System.Text.Encoding.UTF8.GetBytes(file);
                 response.ContentLength64 = fileAsByte.Length;
