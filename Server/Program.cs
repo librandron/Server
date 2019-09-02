@@ -29,9 +29,7 @@ namespace Server
 
                 if(request.Url.LocalPath.Contains("part.html"))
                 {
-                    file = File.ReadAllText(requestPathFile);
-                    var fileJson = File.ReadAllLines(@"D:\");
-                    Database data = JsonConvert.DeserializeObject<Database>(fileJson);
+                    
                 }
 
                 byte[] fileAsByte = System.Text.Encoding.UTF8.GetBytes(file);

@@ -1,7 +1,7 @@
 {
   "Users": {
-    { "Andrey" },
-    { "Olga" },
-    { "Dmitriy" }
+    { "name":"Andrey" },
+    { "name":"Olga" },
+    { "name":"Dmitriy" }
   }
 }
