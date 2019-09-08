@@ -29,7 +29,7 @@ namespace Server
 
                 if(request.Url.LocalPath.Contains("part.html"))
                 {
-                    var fileJson = File.ReadAllText(requestPathFile);
+                    var fileJson = File.ReadAllText(@"c:\Users\Andrey\source\repos\Server\Server\users.json");
                     Database data = JsonConvert.DeserializeObject<Database>(fileJson);
                     var userList = "";
                     foreach (var user in data.users)
