@@ -1,7 +1,13 @@
 {
-  "Users": {
-    { "name":"Andrey" },
-    { "name":"Olga" },
-    { "name":"Dmitriy" }
-  }
+  "Users": [
+    {
+      "name": "Clark"
+    },
+    {
+      "name": "Bruce"
+    },
+    {
+      "name": "Peter"
+    }
+  ]
 }

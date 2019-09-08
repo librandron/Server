@@ -14,11 +14,11 @@ namespace Server
             Stream output;
             HttpListener listener = new HttpListener();
 
-            listener.Prefixes.Add("http://*:8881/");
+            listener.Prefixes.Add("http://localhost:8881/");
             listener.Start();
             while (listener.IsListening)
             {
-                var pathIndex = @"D:\";
+                var pathIndex = @"D:";
                 HttpListenerContext context = listener.GetContext();
                 HttpListenerRequest request = context.Request;
                 HttpListenerResponse response = context.Response;
@@ -29,8 +29,8 @@ namespace Server
 
                 if(request.Url.LocalPath.Contains("part.html"))
                 {
-                    var fileJson = File.ReadAllText(Program.dataBaseSpase);
-                    DataBase data = JsonConvert.DeserializeObject<DataBase>(fileJson);
+                    var fileJson = File.ReadAllText(requestPathFile);
+                    Database data = JsonConvert.DeserializeObject<Database>(fileJson);
                     var userList = "";
                     foreach (var user in data.users)
                     {
