@@ -29,7 +29,13 @@ namespace Server
 
                 if(request.Url.LocalPath.Contains("part.html"))
                 {
-                    
+                    var fileJson = File.ReadAllText(Program.dataBaseSpase);
+                    DataBase data = JsonConvert.DeserializeObject<DataBase>(fileJson);
+                    var userList = "";
+                    foreach (var user in data.users)
+                    {
+                        userList += $@"<li>{user.name}</li>";
+                    }
                 }
 
                 byte[] fileAsByte = System.Text.Encoding.UTF8.GetBytes(file);
