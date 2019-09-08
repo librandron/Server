@@ -1,13 +1,8 @@
 {
-  "Users": [
-    {
-      "name": "Clark"
-    },
-    {
-      "name": "Bruce"
-    },
-    {
-      "name": "Peter"
-    }
+  "Users": 
+  [
+    { "name": "Clark" },
+    { "name": "Bruce" },
+    { "name": "Peter" }
   ]
 }
